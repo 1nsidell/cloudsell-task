@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cloudsell-task"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[tool.setuptools]
+packages = ["app"]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.package-data]
+app = ["py.typed"]
+
+[tool.black]
+line-length = 79
+target-version = ['py312']
+
+[tool.mypy]
+mypy_path = "src"
+files = ["src", "tests"]
+python_version = "3.13"
+
+explicit_package_bases = true
+strict = true
+pretty = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_ignores = true
+allow_untyped_calls = true
+show_error_codes = true
+show_error_context = true
+show_column_numbers = true
+check_untyped_defs = true
+namespace_packages = true
+disallow_untyped_defs = true
