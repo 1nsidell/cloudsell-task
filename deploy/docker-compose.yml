@@ -1,0 +1,25 @@
+services:
+  cloud-sell:
+    container_name: cloud-sell
+    restart: unless-stopped
+    build:
+      context: ..
+      dockerfile: deploy/prod/Dockerfile.prod
+    ports:
+      - 8000:8000
+    networks:
+      - cloud-sell-network
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/cloud-sell/healthcheck/readiness"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  cloud-sell-network:
+    external: true
+    name: cloud-sell-network
