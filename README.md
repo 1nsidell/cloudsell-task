@@ -33,12 +33,25 @@ mypy .
 
 ### 4. Examples of query work.
 
+Тесты:
 ![Тесты.](./pic/tests.png)
+
+Провайдеры:
 ![Провайдеры.](./pic/providers.png)
+
+Провайдеры не найдены:
 ![Провайдеры не найдены.](./pic/tests.png)
+
+Создание заказа:
 ![Создание заказа.](./pic/create_order.png)
-![Статус заказа до.](./pic/order_status_before)
+
+Статус заказа до:
+![Статус заказа до.](./pic/order_status_before.png)
+
+Статус заказа после 1-ой минуты:
 ![Статус заказа после 1-ой минуты.](./pic/tests.png)
+
+Заказ не найден:
 ![Заказ не найден.](./pic/orders_not_found.png)
 
 
